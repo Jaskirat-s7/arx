@@ -4,6 +4,9 @@ title: Top-level package for PyArx.
 
 from importlib import metadata as importlib_metadata
 
+from pyarx.diagnostics import Diagnostic
+from pyarx.errors import ArxError, CompileError, ParseError, RuntimeError
+
 _DISTRIBUTION_NAME = "pyarx"
 
 
@@ -23,4 +26,12 @@ __author__: str = "Ivan Ogasawara"
 __email__: str = "ivan.ogasawara@gmail.com"
 __version__: str = get_version()
 
-__all__ = ["__version__", "get_version"]
+__all__ = [
+    "ArxError",
+    "CompileError",
+    "Diagnostic",
+    "ParseError",
+    "RuntimeError",
+    "__version__",
+    "get_version",
+]
